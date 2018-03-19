@@ -1,5 +1,5 @@
 ---
-title: sinon
+title: Sinon.js의 spy, stub, mock 의 Best Practice
 date: 2018-03-19 17:31:46
 tags:
 ---
