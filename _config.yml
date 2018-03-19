@@ -81,6 +81,8 @@ deploy:
   repo: https://github.com/yoonyoungkim/yoonyoungkim.github.io.git
   branch: master
   message: deploy
+  name: yoonyoungkim
+  email: kyy627@naver.com
 
 feed:
   type: atom
