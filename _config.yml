@@ -78,4 +78,10 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo:
+  repo: https://github.com/yoonyoungkim/yoonyoungkim.github.io.git
+  branch: master
+  message: deploy
+
+feed:
+  type: atom
+  path: atom.xml
