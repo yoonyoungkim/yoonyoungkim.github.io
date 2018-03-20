@@ -41,6 +41,7 @@ workflows:
   build-deploy:
     jobs:
       - build-job
-          branches:
-            only:
-              - development
+          filters:
+            branches:
+              only:
+                - development
