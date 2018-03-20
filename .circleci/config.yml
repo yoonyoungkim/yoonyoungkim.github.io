@@ -39,13 +39,3 @@ jobs:
       # run tests!
       - run: ./node_modules/hexo/bin/hexo generate
       - run: ./node_modules/hexo/bin/hexo deploy
-
-workflows:
-  version: 2
-  build_and_test:
-    jobs:
-      - build
-          filters:
-            branches:
-              only:
-                - development
