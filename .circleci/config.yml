@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  deploy-job:
+  build:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -38,9 +38,9 @@ jobs:
 
 workflows:
   version: 2
-  deploy:
+  build-deploy:
     jobs:
-      - deploy-job
+      - build
           branches:
             only:
               - development
