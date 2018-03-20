@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build-job:
+  build:
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -15,6 +15,10 @@ jobs:
       # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
+    filters:
+      branches:
+        only:
+          - development
     steps:
       - checkout
 
@@ -35,13 +39,3 @@ jobs:
       # run tests!
       - run: ./node_modules/hexo/bin/hexo generate
       - run: ./node_modules/hexo/bin/hexo deploy
-
-workflows:
-  version: 2
-  build-deploy:
-    jobs:
-      - build-job
-          filters:
-            branches:
-              only:
-                - development
