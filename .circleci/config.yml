@@ -3,6 +3,10 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
+general:
+  branches:
+    only:
+      - development
 jobs:
   build:
     docker:
@@ -15,10 +19,6 @@ jobs:
       # - image: circleci/mongo:3.4.4
 
     working_directory: ~/repo
-    filters:
-      branches:
-        only:
-          - development
     steps:
       - checkout
 
